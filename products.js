@@ -1,4 +1,4 @@
-class Productos {
+class Products {
     constructor(name,description,quantity) {
         this.name = name;
         this.description = description;
@@ -7,6 +7,9 @@ class Productos {
 }
 class ProductsManagement {
     constructor() {
+        this.listproducts = []
+    }
+    addProducts(product) {
         this.listproducts.push(product);
     }
     removeProducts(product) {
@@ -26,4 +29,10 @@ class ProductsManagement {
             }
         }
     }
-}
+    showProducts() {
+        return this.listproducts;
+
+    }
+    }
+
+export {Products, ProductsManagement}

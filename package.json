@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Sistema de gestion de productos",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "test": "node index.js"
   },
@@ -15,5 +16,9 @@
   "bugs": {
     "url": "https://github.com/TamarFlores/productos/issues"
   },
-  "homepage": "https://github.com/TamarFlores/productos#readme"
+  "homepage": "https://github.com/TamarFlores/productos#readme",
+  "dependencies": {
+    "esm": "^3.2.25",
+    "mustache": "^4.0.1"
+  }
 }
