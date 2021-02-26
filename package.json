@@ -1,0 +1,19 @@
+{
+  "name": "productos",
+  "version": "1.0.0",
+  "description": "Sistema de gestion de productos",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TamarFlores/productos.git"
+  },
+  "author": "Tamar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TamarFlores/productos/issues"
+  },
+  "homepage": "https://github.com/TamarFlores/productos#readme"
+}
