@@ -3,7 +3,7 @@ class Ui {
     constructor(){
         this.uiName = document.getElementById("name");
         this.uiDescrption = document.getElementById("description");
-        this.uiQuantity = document.getElementById("naquantityme");
+        this.uiQuantity = document.getElementById("quantity");
         this.uiForm = document.getElementById("form-data");
         this.container = document.getElementById("container-table");
         this.manger = new ProductsManagement();
@@ -13,6 +13,18 @@ class Ui {
         this.manger.addProducts(p1);
         this.manger.addProducts(p2);
         this.manger.addProducts(p3);
+        this.loadEvents();
+    }
+    loadEvents(){
+        this.uiForm.addEventListener("submit", (e) =>{
+            e.preventDefault();
+            this.addProducts(
+                this.uiName.value,
+                this.uiDescrption.value,
+                this.uiQuantity.value);
+
+        });
+
     }
     loadTable () {
         var html = "";
@@ -27,6 +39,12 @@ class Ui {
 
         }
         this.container.innerHTML = html;
+    }
+    addProducts(name,description,quantity){
+        let p1 = new Products (name,description, quantity);
+        this.manger.addProducts(p1);
+        this.loadTable();
+
     }
 }
 let ui = new Ui();
